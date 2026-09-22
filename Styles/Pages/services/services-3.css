@@ -1,0 +1,163 @@
+.services-3-section{
+  margin-top: 70px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  row-gap: 100px;
+}
+.services-3-section h1{
+  position: relative;
+  font-family: Arvo;
+}
+.services-3-section h1::after{
+  position: absolute;
+  content: '';
+  background-color: #F63854;
+  height: 1px;
+  bottom: -5px;
+  right: 40%;
+  left: 40%;
+}
+
+.services-3-grid-container{
+  display: grid;
+  grid-auto-columns: 390px;
+  gap: 1em;
+  grid-template-areas: "card-1 middle-side card-2"
+  "card-3 middle-side card-4"
+  "card-5 middle-side card-6";
+  justify-content: center;
+}
+.services-3-grid-container .card{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  row-gap: 15px;
+  box-shadow: 0px 2px 18px rgba(198, 198, 198, 0.3); 
+  transition: box-shadow 0.25s;
+  border-radius: 10px;
+  column-gap: 20px;
+}
+
+.services-3-grid-container .card:hover{
+  box-shadow: 0px 2px 40px rgba(198, 198, 198, 0.541); 
+}
+.services-3-grid-container .card:hover h3{
+  color: #F63854; 
+}
+
+.services-3-grid-container h3{
+  font-family: Arvo;
+  text-align: right;
+  transition: 0.3s;
+  text-align: right;
+}
+
+.services-3-grid-container p{
+  font-size: 14px;
+  line-height: 25px;
+  color: rgb(171, 172, 174);
+  text-align: right;
+}
+
+.services-3-grid-container .h3-right, 
+ .services-3-grid-container .p-right{
+  text-align: left;
+}
+
+.services-3-grid-container .card .text-wrapper{
+  display: flex;
+  flex-direction: column;
+  row-gap: 15px;
+}
+
+.services-3-grid-container .card .icon-wrapper{
+  max-height: 120px;
+  height: 100%;
+  color: #F63854;
+  display: flex;
+  justify-content: center;
+}
+
+.services-3-grid-container .card .icon-wrapper svg{
+  fill: currentColor;
+  width: 44px;
+  height: 40px;
+  transition: 0.25s;
+  margin-top: 20px;
+}
+
+.middle-side{
+  grid-area: middle-side;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 60px;
+}
+.middle-side img{
+  max-width: 90%;
+}
+
+.card-1{
+  grid-area: card-1;
+}
+.card-2{
+  grid-area: card-2;
+}
+.card-3{
+  grid-area: card-3;
+}
+.card-4{
+  grid-area: card-4;
+}
+.card-5{
+  grid-area: card-5;
+}
+.card-6{
+  grid-area: card-6;
+}
+
+.card-4 svg{
+  scale: 0.8
+}
+
+@media screen and (max-width:1200px) {
+  .services-3-grid-container{
+    grid-auto-columns: 300px;
+  }
+}
+@media screen and (max-width:1000px) {
+  .services-3-grid-container{
+    grid-auto-columns: 70vw;
+    grid-template-areas: "card-1" "card-3" "card-5"
+    "middle-side" "middle-side" "middle-side"
+    "card-2" "card-4" "card-6";
+  }
+}
+
+@media screen and (max-width:768px){
+  .services-3-section h1{
+    font-size: 22px;
+  }
+}
+
+@media screen and (max-width:250px) {
+  .services-3-grid-container .card{
+    flex-direction: column;
+  }
+  .services-3-section h1{
+    text-align: center;
+  }
+  .services-3-grid-container h3{
+    text-align: center;
+  }
+  .services-3-grid-container .card .icon-wrapper{
+    order: 1;
+  }
+  .services-3-grid-container .card .text-wrapper{
+    order: 2;
+  }
+}
+

@@ -1,0 +1,116 @@
+.contact-section{
+  padding: 50px;
+  background-color: rgba(85, 85, 85, 0.034);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 50px;
+}
+.contact-section h1{
+  position: relative;
+  font-family: Arvo;
+}
+.contact-section h1::after{
+  position: absolute;
+  content: '';
+  background-color: #F63854;
+  height: 1px;
+  bottom: -5px;
+  right: 32%;
+  left: 32%;
+}
+.contact-container{
+  display: flex;
+  column-gap: 35px;
+}
+form input , textarea{
+  background-color: white;
+  border: 1px solid #f1f1f1;
+  border-radius: 4px;
+  width: 300px;
+  height: 35px;
+  margin-bottom: 20px;
+  padding-left: 10px;
+}
+.name-email-container{
+  display: flex;
+  column-gap: 30px;
+}
+form #subject{
+  max-width: 100%;
+  width: 100%;
+}
+textarea{
+  width: 100%;
+  height: 100%;
+  resize: vertical;
+  padding-top: 10px;
+}
+form button{
+  background-color: #F63854;
+  font-size: 14px;
+  color: white;
+  border: solid #F63854 1px;
+  border-radius: 50px;
+  padding: 12px 30px;
+  transition: 0.25s;
+}
+form button:hover{
+  background-color: white;
+  color: #F63854;
+}
+form button:active{
+  opacity: 0.5;
+}
+
+@media screen and (max-width:1200px) {
+  .contact-container div iframe{
+    width: 400px; 
+    height:284px;
+  }
+  form input{
+    width: 250px;
+    height: 35px;
+  }
+}
+@media screen and (max-width:1000px) {
+  .contact-container{
+    flex-direction: column;
+  }
+  .contact-container div iframe{
+    width: 100%; 
+    height:284px;
+    margin-top: 25px;
+  }
+  form input{
+    width: 300px;
+    height: 35px;
+  }
+}
+
+@media screen and (max-width:768px) {
+  .contact-section{
+    padding: 0;
+  }
+  .contact-container{
+    width: 100%;
+    align-items: center;
+  }
+  .contact-container .name-email-container{
+    display: flex;
+    flex-direction: column;
+  }
+  .contact-section h1{
+    font-size: 22px;
+    text-align: center;
+  }
+  form #subject{
+    width: 70vw;
+  }
+  form input , textarea{
+    width: 70vw;
+  }
+  .contact-container div iframe{
+    width: 70vw;
+  }
+}

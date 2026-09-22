@@ -1,0 +1,63 @@
+
+*{
+  font-family: 'Open Sans', sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+a{
+  text-decoration: none;
+}
+
+p{
+  font-weight: 500;
+}
+
+button{
+  cursor: pointer;
+  font-weight: 500;
+}
+::placeholder{
+  color: rgba(73, 80, 87, 0.678);
+  font-size: 15px;
+}
+
+
+#services-page,
+#team-page,
+#contact-page,
+#pricing-page,
+#testimonial-page {
+  scroll-margin-top: 80px;
+}
+
+.go-up-arrow{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  bottom: 2%;
+  right: 1%;
+  width: 40px;
+  height: 40px;
+  background-color: #F63854;
+  border-radius: 50%;
+  box-shadow: 0px 1px 10px rgba(128, 128, 128, 0.527);
+  z-index: 1000;
+}
+.go-up-arrow svg{
+  width: 50%;
+}
+.go-up-arrow:hover{
+  opacity: 0.8;
+}
+.go-up-arrow:active{
+  scale: 0.8;
+  opacity: 1;
+}

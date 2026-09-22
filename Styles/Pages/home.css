@@ -1,0 +1,123 @@
+.home-section{
+  display: flex;
+  justify-content: center;
+  padding-top: 170px;
+  min-height: 650px;
+  background-image: url(/Images/SVGs/1st/hero-area.svg);
+  background-repeat: no-repeat;
+  background-position: center;  
+  background-size: cover;
+}
+
+.home-section-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 70px;
+  gap: 10px;
+}
+.home-section-container .left-side{
+ display: flex;
+ flex-direction: column;
+ gap: 20px;
+}
+.left-side h1{
+  font-family: Arvo;
+  font-size: 42px;
+  color: black;
+  line-height: 60px;
+}
+.home-section-container .left-side p{
+  max-width: 650px;
+}
+
+
+.left-side .download-now-button,
+  .left-side .learn-more-button{
+  background-color: #F63854;
+  color: white;
+  font-size: 14px;
+  border: solid #F63854 1px;
+  border-radius: 50px;
+  padding: 12px 30px;
+  margin-right: 10px;
+  transition: 0.25s;
+}
+.left-side .download-now-button:hover{
+  background-color: white;
+  color: #F63854;
+}
+.left-side .learn-more-button{
+  background-color: white;
+  color: #F63854;
+}
+.left-side .learn-more-button:hover{
+  background-color: #F63854;
+  color: white;
+}
+.left-side .download-now-button:active,
+  .left-side .learn-more-button:active{
+  opacity: 0.5;
+}
+
+.home-section-container .right-side{
+  display: flex;
+  max-width: 450px;
+  width: 100%;
+}
+.home-section-container .right-side img{
+  width: 100%;
+}
+
+@media screen and (max-width:1200px){
+  .home-section-container{
+    margin-bottom: auto;
+  }
+  .home-section-container .left-side{
+    padding-left: 20px;
+  }
+  .home-section-container .left-side h1{
+    font-size: 40px;
+    width: 100%;
+    line-height: 60px;
+  }
+  .home-section-container .left-side p{
+    max-width: 550px;
+  }
+  .home-section-container .right-side{
+    max-width: 400px;
+  }
+}
+
+@media screen and (max-width:1000px){
+  .home-section-container{
+    margin-bottom: 80px;
+    flex-direction: column;
+  }
+  .home-section-container .left-side p{
+    max-width: 700px;
+  }
+  .home-section-container .right-side{
+    justify-content: center;
+    max-width: 700px;
+    padding-top: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .home-section-container .left-side h1{
+    font-size: 22px;
+    width: 100%;
+    line-height: 35px;
+  }
+  .home-section-container .left-side p{
+    max-width: 500px;
+  }
+  .home-section-container .right-side{
+    max-width: 550px;
+  }
+  .left-side .learn-more-button{
+    margin-top: 15px;  
+  }
+}
+

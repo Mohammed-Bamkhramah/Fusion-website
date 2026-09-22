@@ -1,0 +1,63 @@
+.free-trial-section{
+  padding: 35px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+.free-trial-section div{
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+  max-width: 550px;
+}
+.free-trial-section div h4{
+  font-family: Arvo;
+  font-size: 38px;
+}
+.free-trial-section div p{
+  color: rgb(171, 172, 174);
+  line-height: 25px;
+  font-size: 14px;
+}
+
+.free-trial-section button{
+  background-color: #F63854;
+  font-size: 14px;
+  color: white;
+  border: solid #F63854 1px;
+  border-radius: 50px;
+  padding: 12px 30px;
+  transition: 0.25s;
+  margin-bottom: 5px;
+}
+.free-trial-section button:hover{
+  background-color: white;
+  color: #F63854;
+}
+.free-trial-section button:active{
+  opacity: 0.5;
+}
+
+@media screen and (max-width:1000px) {
+  .free-trial-section div{
+    max-width: 350px;
+  }
+}
+@media screen and (max-width:768px) {
+  .free-trial-section{
+    flex-direction: column;
+    row-gap: 60px;
+  }
+  .free-trial-section div h4{
+    font-size: 22px;
+  }
+  .free-trial-section div{
+    max-width: 100%;
+    padding: 0 20px;
+  }
+  .free-trial-section button{
+    align-self: flex-start;
+    margin-left: 20px;
+  }
+}

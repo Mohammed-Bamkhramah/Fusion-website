@@ -1,0 +1,151 @@
+.services-section{
+  padding-top: 50px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 50px;
+  align-items: center;
+}
+.services-section h1{
+  position: relative;
+  font-family: Arvo;
+}
+.services-section h1::after{
+  position: absolute;
+  content: '';
+  background-color: #F63854;
+  height: 1px;
+  bottom: -5px;
+  right: 36%;
+  left: 36%;
+}
+.services-grid-container{
+  display: grid;
+  grid-auto-columns: 350px;
+  grid-template-areas: "card-1 card-2 card-3" "card-4 card-5 card-6";
+  gap: 35px;
+  justify-content: center;
+}
+
+.services-grid-container h4{
+  font-family: Arvo;
+  color: rgb(88, 91, 96);
+  text-transform: uppercase;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.services-grid-container h4:hover{
+  color: #F63854;
+}
+
+.services-grid-container p{
+  font-size: 14px;
+  line-height: 25px;
+  color: rgb(171, 172, 174);
+  text-align: center;
+  padding: 0 15px;
+}
+
+.services-grid-container .card{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  row-gap: 15px;
+  box-shadow: 0px 2px 18px rgba(198, 198, 198, 0.3); 
+  transition: box-shadow 0.25s;
+  border-radius: 10px;
+  padding: 30px 0;
+}
+
+.services-grid-container .card:hover{
+  box-shadow: 0px 2px 30px rgba(198, 198, 198, 0.541); 
+}
+.services-grid-container .card:hover .icon-wrapper{
+  background-color: #F63854;
+}
+.services-grid-container .card:hover .icon-wrapper svg{
+  fill: white;
+  stroke: white;
+}
+
+.services-grid-container .card .icon-wrapper{
+  display: flex;
+  width: 70px;
+  height: 70px;
+  border: rgba(128, 128, 128, 0.226) solid 1px;
+  border-radius: 35px;
+  justify-content: center;
+  color: #F63854;
+  transition: 0.25s;
+  margin-bottom: 12px;
+}
+
+.services-grid-container .card .icon-wrapper svg{
+  fill: currentColor;
+  stroke: currentColor;
+  width: 50%;
+  transition: 0.25s;
+}
+.services-grid-container .card .icon-wrapper .layers-icon{
+  width: 28px;
+}
+
+#card-1{
+  grid-area: card-1;
+}
+#card-2{
+  grid-area: card-2;
+}
+#card-3{
+  grid-area: card-3;
+}
+#card-4{
+  grid-area: card-4;
+}
+#card-5{
+  grid-area: card-5;
+}
+#card-6{
+  grid-area: card-6;
+}
+
+@media screen and (max-width:1200px) {
+  .services-grid-container{
+    grid-auto-columns: 300px;
+  }
+  .services-grid-container h4{
+    font-size: 14px;
+  }
+}
+@media screen and (max-width:1000px) {
+  .services-grid-container{
+    grid-auto-columns: 350px;
+    grid-template-areas: "card-1 card-2" "card-3 card-4" "card-5 card-6";
+    gap: 25px;
+  }
+  .services-grid-container h4{
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width:768px) {
+  .services-grid-container{
+    grid-auto-columns: 75vw;
+    grid-template-areas: "card-1" "card-2" "card-3"
+    "card-4" "card-5" "card-6";
+    gap: 35px;
+  }
+  .services-grid-container h4{
+    font-size: 14px;
+    text-align: center;
+  }
+  .services-section h1{
+    font-size: 22px;
+  }
+}
+
+@media screen and (max-width:250px) {
+  .services-section h1{
+    text-align: center;
+  }
+}
