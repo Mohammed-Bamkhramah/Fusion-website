@@ -103,7 +103,7 @@ form button:active{
   .contact-section h1{
     font-size: 22px;
     text-align: center;
-    padding-top: 5px;
+    margin-top: 10px;
   }
   form #subject{
     width: 70vw;
